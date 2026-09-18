@@ -1,0 +1,16 @@
+# https://man.archlinux.org/man/mako.5.en
+
+# Style
+font=FiraCode Nerd Font
+include=~/.cache/wal/colors-mako
+anchor=top-right
+default-timeout=5000
+height=300
+outer-margin=5,10
+
+[app-name=osd]
+width=200
+max-icon-size=32
+icon-location=left
+text-alignment=center
+anchor=bottom-center
