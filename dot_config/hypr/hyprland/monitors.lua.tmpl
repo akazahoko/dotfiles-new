@@ -1,0 +1,9 @@
+{{ range .monitors -}}
+hl.monitor({
+    output = "{{ .name }}",
+    mode = "{{ .width }}x{{ .height }}@{{ .refresh_rate }}",
+    position = "{{ .xpos }}x{{ .ypos }}",
+    scale = "{{ .scale }}",
+    transform = "{{ .transform }}"
+})
+{{ end -}}

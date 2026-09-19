@@ -1,0 +1,14 @@
+# monitor(s)
+{{ range .monitors -}}
+monitorrule=name:{{ .name }},width:{{ .width }},height:{{ .height }},refresh:{{ .refresh_rate }},scale:{{ .scale }},x:{{ .xpos }},y:{{ .ypos }}
+{{ end -}}
+
+keymode=default
+{{ if eq .device_type "laptop" }}
+bind=none,XF86MonBrightnessUp,spawn,~/.local/bin/osd/brightness.sh bnctl_up
+bind=none,XF86MonBrightnessDown,spawn,~/.local/bin/osd/brightness.sh bnctl_down
+{{ end }}
+{{ if eq .device_type "desktop" }}
+bind=none,XF86MonBrightnessUp,spawn,~/.local/bin/osd/brightness.sh ddc_up
+bind=none,XF86MonBrightnessDown,spawn,~/.local/bin/osd/brightness.sh ddc_down
+{{ end }}

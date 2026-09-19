@@ -1,0 +1,86 @@
+#!/bin/bash
+
+# https://felixkratz.github.io/SketchyBar/config/bar
+
+source "$CONFIG_DIR/variables.sh"
+WM="rift"
+
+# Bar apperance
+bar=(
+    color="$BAR_COLOR"
+    position=top
+    height=45
+    notch_display_height=42
+    margin=-10
+    # y_offset=-1
+    # corner_radius=20
+    # blur_radius=50
+    notch_width=250
+)
+
+default=(
+    blur_radius=40
+
+    icon.color="$ICON_COLOR"
+    icon.highlight_color="$HIGHLIGHT_COLOR"
+    icon.padding_left="$I_PAD_L"
+    icon.padding_right="$I_PAD_R"
+    icon.font="$ICON_FONT"
+
+    label.color="$LABEL_COLOR"
+    # label.padding_left="$L_PAD_L"
+    label.padding_right="$L_PAD_R"
+    label.font="$LABEL_FONT"
+
+    background.height=42
+    background.color="$ITEM_BG_COLOR"
+    background.y_offset=10
+    background.padding_left="$BG_PAD_L"
+    background.padding_right="$BG_PAD_R"
+)
+
+sketchybar  --bar "${bar[@]}" \
+            --default "${default[@]}" \
+
+# Events
+sketchybar  --add event is_unlock "com.apple.screenIsUnlocked" \
+            --add event input_changed "AppleSelectedInputSourcesChangedNotification" \
+
+case $WM in
+    aerospace)
+        sketchybar  --add event aerospace_workspace_change
+    ;;
+    rift)
+        sketchybar  --add event rift_workspace_changed  \
+                    --add event rift_window_title_changed   \
+                    --add event rift_windows_changed
+    ;;
+    yabai)
+        sketchyBar  --add event yabai_window_focused    \
+                    --add event yabai_title_changed
+    ;;
+esac
+
+LEFT_ITEMS=(
+    $WM/spaces
+    $WM/window
+)
+
+RIGHT_ITEMS=(
+    clock
+    weather
+    network
+    battery
+    volume
+    input
+)
+
+for i in "${LEFT_ITEMS[@]}"; do
+    source "$CONFIG_DIR/items/$i/item.sh"
+done
+
+for i in "${RIGHT_ITEMS[@]}"; do
+    source "$CONFIG_DIR/items/$i/item.sh"
+done
+
+sketchybar --hotload true --update

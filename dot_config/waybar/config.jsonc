@@ -18,7 +18,6 @@
         "tray",
         "group/batt",
         "network",
-        // "bluetooth",
         "pulseaudio",
         "clock"
     ],

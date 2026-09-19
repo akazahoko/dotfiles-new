@@ -1,0 +1,82 @@
+// https://github.com/Alexays/Waybar/wiki/Module:-Hyprland
+{
+    "hyprland/workspaces": {
+        "format": "{icon}{windows}",
+        "format-window-separator": "",
+        "format-icons": {
+            "1": "甲",
+            "2": "乙",
+            "3": "丙",
+            "4": "丁",
+            "5": "戊",
+            "6": "己",
+            "7": "庚",
+            "8": "辛",
+            "9": "壬",
+            "10": "癸"
+        },
+        "persistent-workspaces": {
+            "*": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ]
+        },
+        "ignore-workspaces": [
+            "desktop"
+        ],
+        "workspace-taskbar": {
+            "enable": true,
+            "on-click-window": "hyprctl dispatch 'hl.dsp.focus({ window = \"address:{address}\"})'"
+        },
+        "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'",
+        "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'"
+    },
+    "hyprland/workspaces#side": {
+        "format": "{icon}{windows}",
+        "format-icons": {
+            "1": "甲",
+            "2": "乙",
+            "3": "丙",
+            "4": "丁",
+            "5": "戊",
+            "6": "己",
+            "7": "庚",
+            "8": "辛",
+            "9": "壬",
+            "10": "癸"
+        },
+        "persistent-workspaces": {
+            "*": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ]
+        },
+        "workspace-taskbar": {
+            "enable": true,
+            "orientation": "vertical",
+            "justify": "center",
+            "on-click-window": "hyprctl dispatch 'hl.dsp.focus({ window = \"address:{address}\"})'"
+        },
+        "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'",
+        "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'"
+    },
+    "hyprland/window#side": {
+        "rotate": 270
+    }
+}
