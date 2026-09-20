@@ -1,0 +1,12 @@
+[data]
+device_type = "laptop"
+
+[[data.monitors]]
+name = "eDP-1"
+width = 2880
+height = 1800
+scale = 1.25
+refresh_rate = 120
+xpos = 0
+ypos = 0
+transform = 0

@@ -1,0 +1,25 @@
+{
+    "group/batt": {
+        "orientation": "horizontal",
+        "modules": [
+            "battery",
+            "power-profiles-daemon"
+        ],
+        "drawer": {}
+    },
+    "group/hw": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/hwtray",
+            "cpu",
+            "memory",
+            "temperature"
+        ],
+        "drawer": {
+            "click-to-reveal": true
+        }
+    },
+        "custom/hwtray": {
+        "format": "󰍛"
+    }
+}

@@ -1,0 +1,160 @@
+/* https://github.com/Alexays/Waybar/wiki/Styling */
+
+@import url("/home/lain/.cache/wal/colors-waybar.css");
+
+* {
+    font-family: FiraCode Nerd Font Propo;
+    font-weight: bold;
+    font-size: 18px;
+    color: @foreground;
+}
+
+window#waybar {
+    background-color: @background;
+}
+
+window#waybar.empty #window {
+    opacity: 0;
+}
+
+tooltip {
+    border-radius: 0px;
+    background-color: @background;
+}
+
+tooltip label {
+    font-family: FiraCode Nerd Font Propo;
+    font-weight: Normal;
+    font-size: 18px;
+}
+
+.modules-left {
+    margin-left: 6px;
+}
+
+.modules-right {
+    margin-right: 6px;
+}
+
+/* Widgets */
+#backlight,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#custom-hwtray,
+#layout,
+#keymode,
+#memory,
+#mpris,
+#network,
+#power-profiles-daemon,
+#privacy-item,
+#pulseaudio,
+#temperature,
+#tray,
+#window,
+#workspaces button {
+    padding: 0px 4px;
+    border-radius: 0px;
+}
+
+#layout {
+    font-size: 20px;
+}
+
+#keymode {
+    font-size: 20px;
+    color: @background;
+    background-color: @color5;
+}
+
+/* Style */
+/* #workspaces */
+/* #workspaces button */
+/* #workspaces button.active */
+/* #workspaces button.empty */
+/* #workspaces button.persistent */
+/* #workspaces button.special */
+/* #workspaces button.visible */
+/* #workspaces button.urgent */
+/* #workspaces button.hosting-monitor */
+/* #workspaces .workspace-label */
+/* #workspaces .taskbar-window */
+/* #workspaces .taskbar-window.active */
+
+#workspaces {
+    background-color: @background;
+}
+
+#workspaces button {
+    padding: 0px 0px;
+}
+
+#workspaces button.empty label {
+    color: @color8;
+}
+
+#workspaces button.urgent label {
+    color: @color1;
+}
+
+#workspaces .taskbar-window {
+    padding: 0px 0px;
+}
+
+#workspaces button.active label {
+    color: @color5;
+}
+
+/* window#waybar.empty */
+/* window#waybar.solo */
+/* window#waybar.<app_id> */
+/* window#waybar.floating */
+/* window#waybar.fullscreen */
+/* window#waybar.swallowing */
+
+#pulseaudio.muted {
+    color: @color1;
+}
+
+#mpris.paused {
+    color: @color9;
+}
+
+#bluetooth.off {
+    color: @color9;
+}
+
+#network.disconnected {
+    color: @color9;
+}
+
+#network.disabled {
+    color: @color9;
+}
+
+#tray>.passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @color1;
+}
+
+#power-profiles-daemon.performance {
+    color: @color1;
+}
+
+#power-profiles-daemon.power-saver {
+    color: @color4;
+}
+
+#battery.charging {
+    color: @color2;
+}
+
+#battery.low {
+    color: @color1;
+}

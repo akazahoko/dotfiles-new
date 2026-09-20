@@ -1,0 +1,29 @@
+// https://github.com/Alexays/Waybar/wiki/Module:-Mango
+{
+    "mango/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "󰨓",
+            "active": "󰝤",
+            "empty": "󰨕"
+        },
+        "on-click": "activate"
+    },
+    "mango/window": {
+        "format": "{title}",
+        "icon": true
+    },
+    "mango/layout": {
+        "format-T": "󰯌",
+        "format-S": "󰕫",
+        "format-M": "󰹞",
+        "format-F": "󰕰",
+        "format-CT": "󰕬"
+    },
+    "mango/keymode": {
+        "format-default": "",
+        "format-resize": "󰩨",
+        "format-monitor": "󰍺",
+        "format-float": "󰖲"
+    }
+}

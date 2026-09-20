@@ -1,0 +1,3 @@
+[Default Applications]
+application/x-xournal=com.github.xournalpp.xournalpp.desktop
+application/pdf=org.kde.okular

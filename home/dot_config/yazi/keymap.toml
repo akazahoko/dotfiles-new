@@ -1,0 +1,9 @@
+[mgr]
+prepend_keymap = [
+    { on = [ "<C-n>" ], run = "shell -- dragon-drop -x -i -T %h" }
+]
+
+append_keymap = [
+    { on = [ "g", "C" ], run = "cd ~/.local/share/chezmoi", desc = "Go chezmoi" },
+    { on = [ "g", "U" ], run = "cd ~/HKUST", desc = "Go HKUST" }
+]
