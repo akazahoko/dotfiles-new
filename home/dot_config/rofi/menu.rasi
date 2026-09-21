@@ -1,0 +1,9 @@
+@import "config.rasi"
+
+element-icon {
+    enabled: false;
+}
+
+inputbar {
+   enabled: false; 
+}

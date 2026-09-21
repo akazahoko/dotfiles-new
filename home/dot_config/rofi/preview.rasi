@@ -1,0 +1,25 @@
+@import "config.rasi"
+
+window {
+    width:            800px;
+    height:           500px;
+    orientation:      horizontal;
+    children:         [ mainbox, icon-current-entry ]; /* Places preview panel on the right */
+}
+
+mainbox {
+    children:         [ inputbar, listview ];
+}
+
+element-icon {
+    enabled: false;
+}
+
+icon-current-entry {
+    size:             350px;
+    expand:           false;
+    margin:           10px;
+    border:           1px;
+    border-color:     #89b4fa;
+    border-radius:    8px;
+}

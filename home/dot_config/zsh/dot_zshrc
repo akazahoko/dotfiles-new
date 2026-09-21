@@ -7,6 +7,7 @@ alias open="xdg-open"
 # autoload
 autoload -Uz compinit && compinit
 autoload -Uz colors && colors
+autoload -Uz edit-command-line
 
 # options
 setopt append_history inc_append_history share_history
@@ -22,9 +23,16 @@ export SAVEHIST=10000
 
 # keybinds
 bindkey '^?' backward-delete-char
+bindkey '^H' backward-kill-word
 bindkey '^K' history-search-backward
 bindkey '^J' history-search-forward
 bindkey '^R' fzf-history-widget
+
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
+
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
 
 # yazi
 open-yazi() {
@@ -37,3 +45,8 @@ bindkey '^F' open-yazi
 # custom prompt
 PROMPT="%B%F{green}%n%f%b in %B%F{blue}%~%f%b > "
 RPROMPT="%B%F{red}%T%f%b"
+
+# man
+export MANROFFOPT="-c"
+export MANPAGER="sh -c 'col -bx | bat -l man -p --color=always --pager \"less -RF\"'"
+
