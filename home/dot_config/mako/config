@@ -1,7 +1,7 @@
 # https://man.archlinux.org/man/mako.5.en
 
 # Style
-font=FiraCode Nerd Font
+font=Iosevka Nerd Font Propo
 include=~/.cache/wal/colors-mako
 anchor=top-right
 default-timeout=5000

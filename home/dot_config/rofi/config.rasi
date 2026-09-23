@@ -3,7 +3,7 @@ configuration {
     modes: "";
     combi-modes: "";
 
-    font: "Fira Code Nerd Font Propo 16";
+    font: "Iosevka Nerd Font Propo 16";
     location: 0;
 
     yoffset: 0;

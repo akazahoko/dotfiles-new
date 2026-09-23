@@ -1,5 +1,4 @@
 [global]
-
     ### Display ###
     monitor = 0
     follow = mouse
@@ -8,7 +7,7 @@
     width = 300
     height = (0, 300)
     origin = top-right
-    offset = (10, 50)
+    offset = (6, 6)
     scale = 0
 
     notification_limit = 20
@@ -127,7 +126,7 @@
     min_icon_size = 32
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 128
+    max_icon_size = 64
 
     # Paths to default icons (only necessary when not using recursive icon lookup)
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
@@ -166,18 +165,6 @@
     # Uncomment this if you want to let notifications appear under fullscreen
     # applications (default: overlay)
     # layer = top
-
-    ### Legacy
-
-    # Use the Xinerama extension instead of RandR for multi-monitor support.
-    # This setting is provided for compatibility with older nVidia drivers that
-    # do not support RandR and using it on systems that support RandR is highly
-    # discouraged.
-    #
-    # By enabling this setting dunst will not be able to detect when a monitor
-    # is connected or disconnected which might break follow mode if the screen
-    # layout changes.
-    force_xinerama = false
 
     ### mouse
 
@@ -341,11 +328,6 @@
 #    appname = Pidgin
 #    summary = *says*
 #    urgency = critical
-#
-#[stack-volumes]
-#    appname = "some_volume_notifiers"
-#    set_stack_tag = "volume"
 
 [osd]
     appname = "osd"
-    origin = bottom-center

@@ -5,8 +5,12 @@ show_hidden = true
 xournal = [
     { run = "xournalpp %s", orphan = true }
 ]
+sioyek = [
+    { run = "sioyek %s", orphan = true }
+]
 
 [open]
 prepend_rules = [
-    { url = "*.xopp", use = "xournal" }
+    { url = "*.xopp", use = "xournal" },
+    { url = "*.pdf", use = "sioyek" }
 ]
