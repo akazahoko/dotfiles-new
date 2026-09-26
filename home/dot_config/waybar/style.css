@@ -51,6 +51,7 @@ tooltip label {
 #power-profiles-daemon,
 #privacy-item,
 #pulseaudio,
+#wireplumber,
 #temperature,
 #tray,
 #window,
@@ -115,6 +116,10 @@ tooltip label {
 /* window#waybar.swallowing */
 
 #pulseaudio.muted {
+    color: @color1;
+}
+
+#wireplumber.muted {
     color: @color1;
 }
 

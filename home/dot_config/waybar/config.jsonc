@@ -20,7 +20,8 @@
         "group/hw",
         "bluetooth",
         "network",
-        "pulseaudio",
+        "wireplumber",
+        // "pulseaudio",
         "group/batt"
     ]
 }

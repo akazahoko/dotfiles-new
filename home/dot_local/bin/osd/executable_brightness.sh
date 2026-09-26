@@ -64,4 +64,14 @@ function bnctl_down() {
     bnctl_notify
 }
 
+function bnctl_up_slow() {
+    brightnessctl set 1%+
+    bnctl_notify
+}
+
+function bnctl_down_slow() {
+    brightnessctl set 1%-
+    bnctl_notify
+}
+
 $1

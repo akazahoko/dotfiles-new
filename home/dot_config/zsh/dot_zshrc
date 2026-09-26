@@ -3,6 +3,8 @@ source <(fzf --zsh)
 
 # aliases
 alias open="xdg-open"
+alias ls="ls -v --color=auto"
+alias ll="ls -lGAh --group-directories-first"
 
 # autoload
 autoload -Uz compinit && compinit
@@ -50,3 +52,12 @@ RPROMPT="%B%F{red}%T%f%b"
 export MANROFFOPT="-c"
 export MANPAGER="sh -c 'col -bx | bat -l man -p --color=always --pager \"less -RF\"'"
 
+# fzf
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+    --layout=reverse \
+    --bind='alt-p:toggle-preview' \
+    --bind='alt-j:down' \
+    --bind='alt-k:up' \
+    --preview='bat {}' \
+    --preview-window=down:60% \
+"

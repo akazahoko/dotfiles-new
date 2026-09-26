@@ -7,6 +7,8 @@ keymode=default
 {{ if eq .device_type "laptop" }}
 bind=none,XF86MonBrightnessUp,spawn,~/.local/bin/osd/brightness.sh bnctl_up
 bind=none,XF86MonBrightnessDown,spawn,~/.local/bin/osd/brightness.sh bnctl_down
+bind=shift,XF86MonBrightnessUp,spawn,~/.local/bin/osd/brightness.sh bnctl_up_slow
+bind=shift,XF86MonBrightnessDown,spawn,~/.local/bin/osd/brightness.sh bnctl_down_slow
 {{ end }}
 {{ if eq .device_type "desktop" }}
 bind=none,XF86MonBrightnessUp,spawn,~/.local/bin/osd/brightness.sh ddc_up

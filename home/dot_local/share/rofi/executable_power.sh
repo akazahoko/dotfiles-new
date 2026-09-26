@@ -10,7 +10,7 @@ if [ -n "$1" ]; then
     exit 0
 fi
 
-echo "suspend"
-echo "shutdown"
-echo "reboot"
-echo "logout"
+echo -e "suspend"
+echo -e "shutdown"
+echo -e "reboot"
+echo -e "logout"
