@@ -1,0 +1,22 @@
+[data]
+device_type = "desktop"
+
+[[data.monitors]]
+name = "DP-1"
+width = "2560"
+height = "1440"
+scale = 1.0
+refresh_rate = "165"
+xpos = 0
+ypos = 0
+transform = 0
+
+[[data.monitors]]
+name = "HDMI-A-1"
+width = "1920"
+height = "1080"
+scale = 1.0
+refresh_rate = "60"
+xpos = 2560
+ypos = -240
+transform = 3

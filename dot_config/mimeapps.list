@@ -2,7 +2,7 @@
 text/html=librewolf.desktop
 
 application/x-xopp=com.github.xournalpp.xournalpp.desktop
-application/pdf=org.kde.okular
+application/pdf=org.kde.okular.desktop
 
 video/mp4=mpv.desktop
 video/x-matroska=mpv.desktop
