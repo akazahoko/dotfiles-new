@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+
+grim -g "$(slurp)" $(date).png
+notify-send 

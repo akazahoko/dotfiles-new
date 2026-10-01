@@ -7,6 +7,7 @@ anchor=top-right
 default-timeout=5000
 height=300
 outer-margin=5,10
+layer=overlay
 
 [app-name=osd]
 width=200

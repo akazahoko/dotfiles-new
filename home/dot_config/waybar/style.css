@@ -90,6 +90,7 @@ tooltip label {
 
 #workspaces button {
     padding: 0px 0px;
+    background-color: @background;
 }
 
 #workspaces button.empty label {

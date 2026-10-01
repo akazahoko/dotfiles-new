@@ -10,5 +10,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
 
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export PYTHON_HISTORY="$XDG_STATE_HOME/python_history"
 export COPILOT_HOME="$XDG_CONFIG_HOME/copilot"

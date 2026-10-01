@@ -1,3 +1,8 @@
 [Default Applications]
-application/x-xournal=com.github.xournalpp.xournalpp.desktop
+text/html=librewolf.desktop
+
+application/x-xopp=com.github.xournalpp.xournalpp.desktop
 application/pdf=org.kde.okular
+
+video/mp4=mpv.desktop
+video/x-matroska=mpv.desktop
