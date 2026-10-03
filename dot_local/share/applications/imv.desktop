@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=imv
+Type=Application
+GenericName=Image Viewer
+Comment=X11/Wayland Image Viewer
+Exec=imv-dir %f
+Terminal=false
+Categories=Graphics
+MimeType=image/jpeg;image/png
+NoDisplay=true
