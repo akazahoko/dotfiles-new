@@ -25,10 +25,10 @@ configuration {
 
     terminal: "foot";
 
-   	disable-history: false;
+   	disable-history: true;
     ignored-prefixes: [];
     sort: true;
-    sorting-method: "levenshtein";
+    sorting-method: "normal";
 
     case-smart: true;
     cycle: true;
@@ -36,7 +36,7 @@ configuration {
     hover-select: true;
     eh: 1;
     auto-select: false;
-    matching: "fuzzy";
+    matching: "normal";
     tokenize: true;
     dpi: 1;
 
@@ -122,7 +122,7 @@ configuration {
     // drun-show-actions: false;
     drun-display-format: "{name}";
     // drun-url-launcher: "xdg-open";
-    // drun-use-desktop-cache: false;
+    drun-use-desktop-cache: false;
     // drun-reload-desktop-cache: false;
 
     /* combi */
