@@ -10,6 +10,7 @@ bind=none,XF86MonBrightnessDown,spawn,~/.local/bin/osd/brightness.sh bnctl_down
 bind=shift,XF86MonBrightnessUp,spawn,~/.local/bin/osd/brightness.sh bnctl_up_slow
 bind=shift,XF86MonBrightnessDown,spawn,~/.local/bin/osd/brightness.sh bnctl_down_slow
 {{ end }}
+
 {{ if eq .device_type "desktop" }}
 tagrule=id:*,monitor_name:HDMI-A-1,layout_name:vertical_tile
 bind=none,XF86MonBrightnessUp,spawn,~/.local/bin/osd/brightness.sh ddc_up

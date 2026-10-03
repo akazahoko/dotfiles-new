@@ -14,13 +14,13 @@ function ddc_notify() {
     BRIGHTNESS=$(ddc getvcp 10 | awk '/current value/ {print $9}' | tr -d ',')
 
     if (("$BRIGHTNESS" >= 65)); then
-        ICON=$ICON_DIR/osd/nf-md-brightness_3.png
+        ICON=$ICON_DIR/nf-md-brightness_3.png
     elif (("$BRIGHTNESS" >= 35)); then
-        ICON=$ICON_DIR/osd/nf-md-brightness_2.png
+        ICON=$ICON_DIR/nf-md-brightness_2.png
     elif (("$BRIGHTNESS" > 0)); then
-        ICON=$ICON_DIR/osd/nf-md-brightness_1.png
+        ICON=$ICON_DIR/nf-md-brightness_1.png
     elif (("$BRIGHTNESS" == 0)); then
-        ICON=$ICON_DIR/osd/nf-md-brightness_0.png
+        ICON=$ICON_DIR/nf-md-brightness_0.png
     fi
 
     notify_slider "brightness" "$ICON" "螢幕亮度" "$BRIGHTNESS" "$BRIGHTNESS"
@@ -32,13 +32,13 @@ function bnctl_notify() {
     local PERCENT=$(( ($BRIGHTNESS * 100) / $MAX_BRIGHTNESS ))
 
     if (("$BRIGHTNESS" >= 65)); then
-        ICON=$ICON_DIR/osd/nf-md-brightness_3.png
+        ICON=$ICON_DIR/nf-md-brightness_3.png
     elif (("$BRIGHTNESS" >= 35)); then
-        ICON=$ICON_DIR/osd/nf-md-brightness_2.png
+        ICON=$ICON_DIR/nf-md-brightness_2.png
     elif (("$BRIGHTNESS" > 0)); then
-        ICON=$ICON_DIR/osd/nf-md-brightness_1.png
+        ICON=$ICON_DIR/nf-md-brightness_1.png
     elif (("$BRIGHTNESS" == 0)); then
-        ICON=$ICON_DIR/osd/nf-md-brightness_0.png
+        ICON=$ICON_DIR/nf-md-brightness_0.png
     fi
 
     notify_slider "brightness" "$ICON" "螢幕亮度" "$PERCENT%" "$PERCENT"

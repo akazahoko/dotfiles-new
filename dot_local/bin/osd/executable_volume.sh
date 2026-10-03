@@ -11,15 +11,15 @@ function sink_notify() {
 
     if [[ "$STATUS" == "[MUTED]" ]]; then
         VOLUME="已靜音"
-        ICON=$ICON_DIR/osd/nf-fa-volume_mute.png
+        ICON=$ICON_DIR/nf-fa-volume_mute.png
     elif (("$VOLUME" >= 65)); then
-        ICON=$ICON_DIR/osd/nf-fa-volume_high.png
+        ICON=$ICON_DIR/nf-fa-volume_high.png
     elif (("$VOLUME" >= 35)); then
-        ICON=$ICON_DIR/osd/nf-fa-volume_middle.png
+        ICON=$ICON_DIR/nf-fa-volume_middle.png
     elif (("$VOLUME" > 0)); then
-        ICON=$ICON_DIR/osd/nf-fa-volume_low.png
+        ICON=$ICON_DIR/nf-fa-volume_low.png
     elif (("$VOLUME" == 0)); then
-        ICON=$ICON_DIR/osd/nf-fa-volume_zero.png
+        ICON=$ICON_DIR/nf-fa-volume_zero.png
     fi
 
     notify_slider "osd-volume-sink" "$ICON" "輸出音量" "$VOLUME" "$PROGRESS"
@@ -32,9 +32,9 @@ function src_notify() {
 
     if [[ "$STATUS" == "[MUTED]" ]]; then
         VOLUME="已靜音"
-        ICON=$ICON_DIR/osd/nf-md-microphone_off.png
+        ICON=$ICON_DIR/nf-md-microphone_off.png
     else
-        ICON=$ICON_DIR/osd/nf-md-microphone.png
+        ICON=$ICON_DIR/nf-md-microphone.png
     fi
 
     notify_slider "osd-volume-src" "$ICON" "輸入音量" "$VOLUME" "$PROGRESS"

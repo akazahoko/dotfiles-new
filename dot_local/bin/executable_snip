@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+
+REGION="$(slurp $=SLURP_ARGS)"
+
+if [[ -z $REGION ]]; then
+    exit 0
+fi
+
+FILE="$HOME/Pictures/Screenshots/$(date +'%Y-%m-%d_%H%M%S').png"
+grim -g $REGION $FILE
+wl-copy < $FILE
+notify-send -i $FILE "Screenshot Captured!" 

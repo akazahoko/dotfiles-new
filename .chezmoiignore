@@ -11,16 +11,13 @@ hosts/**
 {{ end }}
 
 {{ if eq .chezmoi.os "darwin" }}
-.config/dunst/**
 .config/foot/**
-.config/fuzzel/**
-.config/hypr/**
-.config/kdeglobals
+.config/Kvantum/**
 .config/mako/**
 .config/mango/**
-.config/qt6ct/**
 .config/rofi/**
 .config/waybar/**
+.config/mimeapps.list
 {{ end }}
 
 {{ if ne .chezmoi.osRelease.id "arch" }}

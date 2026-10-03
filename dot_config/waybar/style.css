@@ -5,7 +5,7 @@
 * {
     font-family: "Iosevka Nerd Font Propo", "Noto Sans Mono CJK HK";
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     color: @foreground;
 }
 
@@ -60,12 +60,7 @@ tooltip label {
     border-radius: 0px;
 }
 
-#layout {
-    font-size: 20px;
-}
-
 #keymode {
-    font-size: 20px;
     color: @background;
     background-color: @color5;
 }

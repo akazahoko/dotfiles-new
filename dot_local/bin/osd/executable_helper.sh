@@ -4,7 +4,7 @@ SCRIPT="${0:A:h}/$NAME/funcs.sh"
 CONTINUE='read -k 1 -q "?Press any key to continue"'
 CHAFA='chafa -f sixels -s "${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}"'
 BAT='bat --color=always'
-ICON_DIR="${0:A:h:h}/icons"
+ICON_DIR="$HOME/.local/bin/osd/icons"
 
 show_dmenu() {
     fuzzel --dmenu \

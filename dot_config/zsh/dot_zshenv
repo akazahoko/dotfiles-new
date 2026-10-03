@@ -4,19 +4,10 @@ export PATH="$HOME/.local/bin:$PATH"
 export TERMINAL="foot"
 export EDITOR="nvim"
 
-# XDG Base Directory
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
 
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
-export PYTHON_HISTORY="$XDG_STATE_HOME/python_history"
-export COPILOT_HOME="$XDG_CONFIG_HOME/copilot"
-export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
-export GOPATH="$XDG_DATA_HOME/go"
-export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
-export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+source $HOME/.cache/wal/colors-zsh.sh
+export SLURP_ARGS="-b ${WAL_COLOR_BG}c8 -c ${WAL_COLOR_FG}ff"

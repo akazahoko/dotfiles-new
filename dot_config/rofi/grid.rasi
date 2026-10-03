@@ -1,0 +1,32 @@
+@import "config.rasi"
+
+configuration {
+    show-icons: true;
+}
+
+mainbox {
+    children: [ listview ];
+}
+
+listview {
+    columns: 6;
+    lines: 6;
+}
+
+window {
+    width: 50%;
+}
+
+element {
+    orientation: vertical;
+}
+
+element-icon {
+    size: 160px;
+    horizontal-align: 0.5;
+}
+
+element-text {
+    enabled: false;
+    horizontal-align: 0.5;
+}

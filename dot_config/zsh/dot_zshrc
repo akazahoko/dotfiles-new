@@ -1,12 +1,17 @@
 source <(fzf --zsh)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.cache/wal/colors-zsh.sh
+[[ -f "$HOME/.cache/wal/colors-zsh.sh" ]] && source $HOME/.cache/wal/colors-zsh.sh
 
 # aliases
 alias open='xdg-open'
 alias ls='ls -v --color=auto'
 alias ll='ls -lGAh --group-directories-first'
-alias slurp='slurp -d -F "Iosevka Nerd Font Propo" -b "$WAL_COLOR_BG"c8 -c "$WAL_COLOR_FG"ff'
+alias slurp='slurp $=SLURP_ARGS'
+alias wal='wal -o "$HOME/.config/wal/postrun.sh"'
+
+alias nv="nvim"
+alias v="vim"
+alias vim="nvim"
 
 # autoload
 autoload -Uz compinit && compinit
