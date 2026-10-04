@@ -1,18 +1,18 @@
-vim.opt.number = true
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+    if vim.v.shell_error ~= 0 then
+        vim.api.nvim_echo({
+            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+            { out, "WarningMsg" },
+            { "\nPress any key to exit..." },
+        }, true, {})
+        vim.fn.getchar()
+        os.exit(1)
+    end
+end
+vim.opt.rtp:prepend(lazypath)
 
-vim.opt.relativenumber = true
-vim.opt.cursorline = true
-
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4		
-vim.opt.expandtab = true	-- tab to spaces
-vim.opt.smartindent = true
-
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.hlsearch = true
-vim.opt.incsearch = true
-
-vim.opt.termguicolors = false
-
-vim.cmd.source("/home/lain/.cache/wal/colors-wal.vim")
+require("lazy").setup({ { import = "plugins" } })
+require("options")
