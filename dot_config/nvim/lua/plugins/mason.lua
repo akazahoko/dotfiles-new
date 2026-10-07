@@ -2,7 +2,10 @@ return {
 	"mason-org/mason.nvim",
 	lazy = false,
 	opts = {
-		ensure_installed = { "stylua" },
+		ensure_installed = {
+			"stylua",
+			"verible",
+		},
 	},
 
 	-- auto install
