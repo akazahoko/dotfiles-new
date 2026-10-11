@@ -5,6 +5,8 @@ return {
 		ensure_installed = {
 			"stylua",
 			"verible",
+			"shfmt",
+			"taplo",
 		},
 	},
 
