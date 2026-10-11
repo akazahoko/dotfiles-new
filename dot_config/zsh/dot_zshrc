@@ -13,6 +13,9 @@ alias nv="nvim"
 alias v="vim"
 alias vim="nvim"
 
+alias rclone="rclone -P"
+alias rsync="rclone sync"
+
 # autoload
 autoload -Uz compinit && compinit
 autoload -Uz colors && colors
