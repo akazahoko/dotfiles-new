@@ -1,0 +1,31 @@
+# monitor(s)
+{{ range .monitors -}}
+[[rule.monitor_rule]]
+name = "{{ .name }}"
+width = {{ .width }}
+height = {{ .height }}
+refresh = {{ .refresh_rate }}
+x = {{ .xpos }}
+y = {{ .ypos }}
+scale = {{ .scale }}
+rr = {{ .transform }}
+
+{{ end -}}
+{{ if eq .device_type "laptop" }}
+[bind.default]
+"XF86MonBrightnessUp" = "spawn,~/.local/bin/osd/brightness.sh bnctl_up"
+"XF86MonBrightnessDown" = "spawn,~/.local/bin/osd/brightness.sh bnctl_down"
+"SHIFT+XF86MonBrightnessUp" = "spawn,~/.local/bin/osd/brightness.sh bnctl_up_slow"
+"SHIFT+XF86MonBrightnessDown" = "spawn,~/.local/bin/osd/brightness.sh bnctl_down_slow"
+{{ end }}
+{{ if eq .device_type "desktop" }}
+[[rule.tag_rule]]
+monitor_name = "HDMI-A-1"
+layout_name = "vertical_tile"
+
+[bind.default]
+"XF86MonBrightnessUp" = "spawn,~/.local/bin/osd/brightness.sh ddc_up"
+"XF86MonBrightnessDown" = "spawn,~/.local/bin/osd/brightness.sh ddc_down"
+{{ end }}
+[env]
+"QT_AUTO_SCREEN_SCALE_FACTOR" = "{{ (index .monitors 0).scale }}"

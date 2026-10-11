@@ -1,0 +1,26 @@
+[global]
+
+# keyboard
+repeat_rate = 60
+repeat_delay = 250
+numlock_on = 1
+xkb_rules_layout = "us"
+
+# mouse
+mouse_natural_scrolling = 0
+mouse_accel_profile = 2
+mouse_accel_speed = 0.5
+axis_scroll_factor = 2.0
+
+# trackpad
+disable_trackpad = 0
+tap_to_click = 1
+tap_and_drag = 1
+drag_lock = 1
+trackpad_natural_scrolling = 1
+trackpad_disable_while_typing = 1
+trackpad_left_handed = 0
+trackpad_middle_button_emulation = 0
+trackpad_accel_profile = 2
+trackpad_accel_speed = 0.35
+swipe_min_threshold = 1

@@ -1,0 +1,33 @@
+[global]
+
+source = [
+  "./input_devices.toml",
+  "./layouts.toml",
+  "./overview.toml",
+  "./visuals.toml",
+  "./binds.toml",
+  "./monitors.toml",
+  "./miscellaneous.toml",
+  "./rules.toml",
+]
+
+exec_once = [
+  "waybar",
+  "fcitx5",
+  "awww-daemon",
+  "wl-paste --type text --watch cliphist store",
+  "wl-paste --type image --watch cliphist store",
+  "wl-clip-persist --clipboard regular",
+  "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
+]
+
+[env]
+# qt
+"QT_QPA_PLATFORM" = "wayland;xcb"
+"QT_QPA_PLATFORMTHEME" = "qt6ct"
+"QT_WAYLAND_DISABLE_WINDOWDECORATION" = "1"
+# xdg
+"XDG_MENU_PREFIX" = "arch-"
+# fcitx
+"QT_IM_MODULE" = "fcitx"
+"XMODIFIERS" = "@im=fcitx"

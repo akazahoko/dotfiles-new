@@ -1,0 +1,30 @@
+# tag
+[[rule.tag_rule]]
+id = "*"
+layout_name = "tile"
+
+# window
+[[rule.window_rule]]
+app_id = "code"
+focused_opacity = 0.9
+
+[[rule.window_rule]]
+app_id = "foot"
+focused_opacity = 0.9
+
+[[rule.window_rule]]
+app_id = "discord"
+focused_opacity = 0.9
+
+[[rule.window_rule]]
+app_id = "org.kde.dolphin"
+focused_opacity = 0.9
+
+[[rule.window_rule]]
+app_id = "obsidian"
+focused_opacity = 0.9
+
+# layer
+[[rule.layer_rule]]
+layer_name = "selection"
+no_blur = 1

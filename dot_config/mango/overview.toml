@@ -1,0 +1,8 @@
+[global]
+
+hotarea_size = 10
+enable_hotarea = 0
+hotarea_disable_on_fullscreen = 1
+overview_gap_inner = 5
+overview_gap_outer = 30
+overcircle_center_ratio = 0.5

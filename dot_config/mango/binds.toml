@@ -1,0 +1,196 @@
+[bind.common]
+"SUPER+SHIFT+f5" = "reload_config"
+"SUPER+CTRL+ALT+SHIFT+escape" = "setkeymode,default"
+
+[bind.default]
+"SUPER+n" = "switch_layout"
+
+"SUPER+SHIFT+m" = "quit"
+"SUPER+q" = "killclient"
+"SUPER+SHIFT+q" = "killclient,force"
+
+"SUPER+left" = "focusdir,left"
+"SUPER+up" = "focusdir,up"
+"SUPER+down" = "focusdir,down"
+"SUPER+right" = "focusdir,right"
+
+"SUPER+h" = "focusdir,left"
+"SUPER+k" = "focusdir,up"
+"SUPER+j" = "focusdir,down"
+"SUPER+l" = "focusdir,right"
+
+"SUPER+bracketleft" = "focusstack,prev"
+"SUPER+bracketright" = "focusstack,next"
+
+"SUPER+CTRL+left" = "viewtoleft,0"
+"SUPER+CTRL+right" = "viewtoright,0"
+"SUPER+CTRL+SHIFT+left" = "tagtoleft,1"
+"SUPER+CTRL+SHIFT+right" = "tagtoright,0"
+
+"SUPER+CTRL+h" = "viewtoleft,0"
+"SUPER+CTRL+l" = "viewtoright,0"
+"SUPER+CTRL+SHIFT+h" = "tagtoleft,0"
+"SUPER+CTRL+SHIFT+l" = "tagtoright,0"
+
+"SUPER+ALT+SHIFT+left" = "tagmon,left"
+"SUPER+ALT+SHIFT+down" = "tagmon,down"
+"SUPER+ALT+SHIFT+up" = "tagmon,up"
+"SUPER+ALT+SHIFT+right" = "tagmon,right"
+
+# swap window
+"SUPER+SHIFT+left" = "move_client,left"
+"SUPER+SHIFT+up" = "move_client,up"
+"SUPER+SHIFT+down" = "move_client,down"
+"SUPER+SHIFT+right" = "move_client,right"
+
+"SUPER+SHIFT+h" = "move_client,left"
+"SUPER+SHIFT+j" = "move_client,up"
+"SUPER+SHIFT+k" = "move_client,down"
+"SUPER+SHIFT+l" = "move_client,right"
+
+# Fullscreen
+"SUPER+f" = "togglemaximizescreen"
+"SUPER+SHIFT+f" = "togglefullscreen"
+"SUPER+CTRL+f" = "togglefakefullscreen"
+"SUPER+t" = "togglefloating"
+
+# tags
+"SUPER+1" = "view,1,0"
+"SUPER+2" = "view,2,0"
+"SUPER+3" = "view,3,0"
+"SUPER+4" = "view,4,0"
+"SUPER+5" = "view,5,0"
+"SUPER+6" = "view,6,0"
+"SUPER+7" = "view,7,0"
+"SUPER+8" = "view,8,0"
+"SUPER+9" = "view,9,0"
+
+"SUPER+SHIFT+1" = "tag,1,0"
+"SUPER+SHIFT+2" = "tag,2,0"
+"SUPER+SHIFT+3" = "tag,3,0"
+"SUPER+SHIFT+4" = "tag,4,0"
+"SUPER+SHIFT+5" = "tag,5,0"
+"SUPER+SHIFT+6" = "tag,6,0"
+"SUPER+SHIFT+7" = "tag,7,0"
+"SUPER+SHIFT+8" = "tag,8,0"
+"SUPER+SHIFT+9" = "tag,9,0"
+
+"SUPER+CTRL+SHIFT+1" = "tagsilent,1,0"
+"SUPER+CTRL+SHIFT+2" = "tagsilent,2,0"
+"SUPER+CTRL+SHIFT+3" = "tagsilent,3,0"
+"SUPER+CTRL+SHIFT+4" = "tagsilent,4,0"
+"SUPER+CTRL+SHIFT+5" = "tagsilent,5,0"
+"SUPER+CTRL+SHIFT+6" = "tagsilent,6,0"
+"SUPER+CTRL+SHIFT+7" = "tagsilent,7,0"
+"SUPER+CTRL+SHIFT+8" = "tagsilent,8,0"
+"SUPER+CTRL+SHIFT+9" = "tagsilent,9,0"
+
+# overview
+"ALT+tab" = "switcher,all_tag_next"
+"SUPER+tab" = "overcircle"
+
+# scroller layout
+# bind=SUPER+SHIFT,r,set_proportion,1.0
+# bind=SUPER,r,switch_proportion_preset,
+# bind=CTRL+ALT+SUPER,Left,scroller_stack,left
+# bind=CTRL+ALT+SUPER,Right,scroller_stack,right
+# bind=CTRL+ALT+SUPER,Up,scroller_stack,up
+# bind=CTRL+ALT+SUPER,Down,scroller_stack,down
+
+# switch window status
+"SUPER+o" = "toggleoverlay"
+"SUPER+SHIFT+o" = "toggleglobal"
+"SUPER+i" = "minimized"
+"SUPER+SHIFT+i" = "restore_minimized"
+"SUPER+grave" = "toggle_scratchpad"
+
+# spawns
+"SUPER+space" = "spawn,rofi -show drun"
+"SUPER+return" = "spawn,foot"
+"SUPER+b" = "spawn,firefox"
+"SUPER+e" = "spawn,foot -e yazi"
+
+"SUPER+ALT+space" = "spawn,~/.local/bin/menus/launcher/dmenu.sh"
+
+"XF86AudioRaiseVolume" = "spawn,~/.local/bin/osd/volume.sh sink_up"
+"XF86AudioLowerVolume" = "spawn,~/.local/bin/osd/volume.sh sink_down"
+"XF86AudioMute" = "spawn,~/.local/bin/osd/volume.sh sink_mute"
+
+"CTRL+ALT+delete" = "spawn,rofi -show \"power:~/.local/share/rofi/power.sh\" -theme power"
+"SUPER+v" = "spawn,rofi -show \"clipboard:~/.local/share/rofi/clipboard.sh\" -theme clipboard"
+"SUPER+p" = "spawn,rofi -show \"pacman:~/.local/share/rofi/pacman.sh\""
+"SUPER+SHIFT+s" = "spawn,~/.local.bin/snip"
+"SUPER+SHIFT+t" = "spawn,rofi -show \"theme:~/.local/share/rofi/theme.sh\" -theme icons-grid"
+"SUPER+f5" = "spawn,chezmoi apply"
+
+# mouse
+[mousebind.default]
+"SUPER+btn_left" = "moveresize,curmove"
+"SUPER+btn_middle" = "togglemaximizescreen,0"
+"SUPER+btn_right" = "moveresize,curresize"
+
+# mouse axis
+[axisbind.default]
+"SUPER+up" = "viewtoleft_have_client"
+"SUPER+down" = "viewtoright_have_client"
+"SUPER+left" = "focusdir,left"
+"SUPER+right" = "focusdir,right"
+
+# gesture
+[gesturebind.default]
+"none+left+3" = "focusdir,left"
+"none+down+3" = "focusdir,down"
+"none+up+3" = "focusdir,up"
+"none+right+3" = "focusdir,right"
+
+"none+right+4" = "viewprev_have_client"
+"none+left+4" = "viewnext_have_client"
+"none+up+4" = "enteroverview"
+"none+down+4" = "leaveoverview"
+"SUPER+alldir+3" = "moveresize,curmove"
+
+
+# key_mode
+[bind.default]
+"SUPER+r" = "setkeymode,resize"
+
+[bind.resize]
+"SUPER+r" = "setkeymode,default"
+"escape" = "setkeymode,default"
+
+"left" = "resizewin,-50,+0"
+"down" = "resizewin,+0,+50"
+"up" = "resizewin,+1,-50"
+"right" = "resizewin,+50,+0"
+
+"h" = "resizewin,-50,+0"
+"j" = "resizewin,+0,+50"
+"k" = "resizewin,+1,-50"
+"l" = "resizewin,+50,+0"
+
+"SUPER+left" = "focusdir,left"
+"SUPER+down" = "focusdir,down"
+"SUPER+up" = "focusdir,up"
+"SUPER+right" = "focusdir,right"
+
+"SUPER+h" = "focusdir,left"
+"SUPER+j" = "focusdir,down"
+"SUPER+k" = "focusdir,up"
+"SUPER+l" = "focusdir,right"
+
+[bind.float]
+"SUPER+CTRL+t" = "setkeymode,default"
+"escape" = "setkeymode,default"
+
+"space" = "togglefloating"
+"c" = "centerwin"
+
+"left" = "movewin,-50,+0"
+"down" = "movewin,+0,+50"
+"up" = "movewin,+1,-50"
+"right" = "movewin,+50,+0"
+
+"h" = "movewin,-50,+0"
+"j" = "movewin,+0,+50"
+"k" = "movewin,+1,-50"
+"l" = "movewin,+50,+0"
