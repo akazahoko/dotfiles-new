@@ -108,7 +108,7 @@
 "SUPER+space" = "spawn,rofi -show drun"
 "SUPER+return" = "spawn,foot"
 "SUPER+b" = "spawn,firefox"
-"SUPER+e" = "spawn,foot -e yazi"
+"SUPER+e" = "spawn,foot zsh -c \"yazi\""
 
 "SUPER+ALT+space" = "spawn,~/.local/bin/menus/launcher/dmenu.sh"
 
