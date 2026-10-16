@@ -1,27 +1,26 @@
-// Reference: https://github.com/Alexays/Waybar/wiki/Configuration
 {
     "position": "top",
-    "height": 34,
+    "height": 24,
     "spacing": 4,
+    "fixed-center": false,
     "include": [
         "./modules/*.jsonc"
     ],
     "modules-left": [
         "mango/workspaces",
         "mango/layout",
-        "mango/keymode"
-    ],
-    "modules-center": [
-        "clock"
+        "mango/keymode",
+        "mango/window"
     ],
     "modules-right": [
+        "mpris",
         "privacy",
         "tray",
-        "group/hw",
-        "bluetooth",
+        "cpu",
+        "memory",
         "network",
         "wireplumber",
-        // "pulseaudio",
-        "group/batt"
+        "group/batt",
+        "clock"
     ]
 }

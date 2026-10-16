@@ -1,11 +1,10 @@
-// https://github.com/Alexays/Waybar/wiki/Module:-Network
 {
     "network": {
         "format": "{ifname}",
         "format-ethernet": "󰖟",
         "format-linked": "󰈀",
         "format-alt": "{bandwidthDownBits} {bandwidthUpBits}",
-        "format-wifi": "{icon}{essid}",
+        "format-wifi": "[{essid}]",
         "format-disconnected": "󰪎",
         "format-disabled": "󰀝",
         "format-icons": [

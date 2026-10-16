@@ -10,7 +10,7 @@
 }
 
 window#waybar {
-    background-color: @background;
+    background-color: @color2;
 }
 
 window#waybar.empty #window {
@@ -23,17 +23,17 @@ tooltip {
 }
 
 tooltip label {
-    font-family: FiraCode Nerd Font Propo;
+    font-family: "Iosevka Nerd Font Propo";
     font-weight: Normal;
     font-size: 18px;
 }
 
 .modules-left {
-    margin-left: 6px;
+    background-color: @background;
 }
 
 .modules-right {
-    margin-right: 6px;
+    background-color: @background;
 }
 
 /* Widgets */
@@ -56,13 +56,24 @@ tooltip label {
 #tray,
 #window,
 #workspaces button {
-    padding: 0px 4px;
+    /* padding: 0px 4px; */
     border-radius: 0px;
+    background-color: @background;
 }
 
 #keymode {
     color: @background;
     background-color: @color5;
+}
+
+#custom-sep {
+    padding: 0px 0px;
+    margin: 0px 0px;
+}
+
+#window {
+    background-color: @color2;
+    padding-left: 4px;
 }
 
 /* Style */
@@ -88,6 +99,10 @@ tooltip label {
     background-color: @background;
 }
 
+#workspaces button label {
+    padding: 0px 6px;
+}
+
 #workspaces button.empty label {
     color: @color8;
 }
@@ -96,12 +111,9 @@ tooltip label {
     color: @color1;
 }
 
-#workspaces .taskbar-window {
-    padding: 0px 0px;
-}
-
 #workspaces button.active label {
-    color: @color5;
+    color: @foreground;
+    background-color: @color2;
 }
 
 /* window#waybar.empty */
@@ -119,6 +131,11 @@ tooltip label {
     color: @color1;
 }
 
+#mpris {
+    padding-right: 4px;
+    background-color: @color3;
+}
+
 #mpris.paused {
     color: @color9;
 }
@@ -134,6 +151,7 @@ tooltip label {
 #network.disabled {
     color: @color9;
 }
+
 
 #tray>.passive {
     -gtk-icon-effect: dim;

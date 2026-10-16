@@ -1,20 +1,19 @@
-// https://github.com/Alexays/Waybar/wiki/Module:-Clock
 {
     "clock": {
         "interval": 30,
         "locale": "zh_HK.UTF-8",
-        "format": "{:L%b%d日 %A %H:%M}",
+        "format": "[{:L%b%d日 %A %H:%M}]",
         "justify": "center",
-        "tooltip-format": "<span size='16pt' font='Noto Sans Mono CJK HK'>{calendar}</span>",
+        "tooltip-format": "<span size='16pt' font='Iosevka Nerd Font Propo'>{calendar}</span>",
         "calendar": {
             "mode": "month",
             "mode-mon-col": 3,
             "on-scroll": 1,
             "format": {
-                "months": "<span color='#cdd6f4'><b>{}</b></span>",
-                "days": "<span color='#cdd6f4'>{}</span>",
-                "weekdays": "<span color='#cdd6f4'><b>{}</b></span>",
-                "today": "<span color='#cba6f7'><b>{}</b></span>"
+                "months": "{}",
+                "days": "{}",
+                "weekdays": "{}",
+                "today": "<u>{}</u>"
             }
         },
         "actions": {
@@ -22,6 +21,5 @@
             "on-scroll-up": "shift_down",
             "on-scroll-down": "shift_up"
         }
-    },
-
+    }
 }

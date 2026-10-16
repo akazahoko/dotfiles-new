@@ -1,4 +1,3 @@
-// https://github.com/Alexays/Waybar/wiki/Module:-Temperature
 {
     "temperature": {
         "format": "TEMP:{temperatureC}°C",

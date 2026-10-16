@@ -1,18 +1,11 @@
-// https://github.com/Alexays/Waybar/wiki/Module:-PulseAudio
 {
     "wireplumber": {
-        "format": "{icon}",
-        "format-icons": {
-            "default": [
-                "",
-                "",
-                "",
-                ""
-            ]
+        "format": "[VOL {volume}]",
+        "foormat-icons": {
+            "default": ["", "", "", ""]
         },
-        "format-muted": "",
         "scroll-step": 1,
-        "on-click-right": "pavucontrol",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "tooltip-format": "Sink:\t{desc}\nVolume:\t{volume}%"
     }
 }

@@ -1,24 +1,9 @@
-// https://github.com/Alexays/Waybar/wiki/Module:-Battery
 {
     "battery": {
-        "format": "{icon}{capacity}%",
+        "format": "[BAT {capacity}]",
         "format-icons": {
-            "default": [
-                "󰂎",
-                "󰁺",
-                "󰁻",
-                "󰁼",
-                "󰁽",
-                "󰁾",
-                "󰁿",
-                "󰂀",
-                "󰂁",
-                "󰂂",
-                "󰁹"
-            ],
-            "charging": [
-                "󰚥"
-            ]
+            "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+            "charging": ["󰚥"]
         },
         "tooltip-format": "Capacity:\t{capacity}%\nTime:\t\t{time}",
         "states": {

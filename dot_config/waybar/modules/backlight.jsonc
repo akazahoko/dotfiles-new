@@ -1,12 +1,6 @@
-// https://github.com/Alexays/Waybar/wiki/Module:-Backlight
 {
     "backlight": {
         "format": "{icon}",
-        "format-icons": [
-            "󰃞",
-            "󰃝",
-            "󰃟",
-            "󰃠"
-        ]
+        "format-icons": [ "󰃞", "󰃝", "󰃟", "󰃠" ]
     }
 }

@@ -1,7 +1,0 @@
-// https://github.com/Alexays/Waybar/wiki/Module:-Bluetooth
-{
-    "bluetooth": {
-        "format": "",
-        "format-off": ""
-    }
-}
