@@ -1,12 +1,13 @@
 [mgr]
+ratio = [1, 4, 3]
+sort_by = "natural"
+sort_dir_first = true
+linemode = "size"
 show_hidden = true
+show_symlink = true
 
-[opener]
-sioyek = [
-    { run = "sioyek %s", orphan = true }
-]
+[manager]
+show_icons = false
 
-[open]
-prepend_rules = [
-    { url = "*.pdf", use = "sioyek" }
-]
+[preview]
+wrap = "yes"
