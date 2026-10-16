@@ -7,6 +7,8 @@ return {
 			"verible",
 			"shfmt",
 			"taplo",
+			"isort",
+			"black",
 		},
 	},
 

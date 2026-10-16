@@ -47,10 +47,14 @@ zle -N edit-command-line
 bindkey '^X^E' edit-command-line
 
 # yazi
-open-yazi() {
-    yazi <$TTY
-    zle reset-prompt
+function open-yazi() {
+    local tmp cwd; tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd" || builtin true
+	command rm -f -- "$tmp"
 }
+
 zle -N open-yazi
 bindkey '^F' open-yazi
 
