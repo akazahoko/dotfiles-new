@@ -19,11 +19,11 @@
 "SUPER+j" = "focusdir,down"
 "SUPER+l" = "focusdir,right"
 
-"SUPER+bracketleft" = "focusstack,prev"
-"SUPER+bracketright" = "focusstack,next"
+# "SUPER+bracketleft" = "focusstack,prev"
+# "SUPER+bracketright" = "focusstack,next"
 
-"SUPER+CTRL+left" = "viewtoleft,0"
-"SUPER+CTRL+right" = "viewtoright,0"
+"SUPER+bracketleft" = "viewtoleft,0"
+"SUPER+bracketright" = "viewtoright,0"
 "SUPER+CTRL+SHIFT+left" = "tagtoleft,1"
 "SUPER+CTRL+SHIFT+right" = "tagtoright,0"
 
@@ -64,6 +64,7 @@
 "SUPER+7" = "view,7,0"
 "SUPER+8" = "view,8,0"
 "SUPER+9" = "view,9,0"
+"SUPER+0" = "toggle_special_tag"
 
 "SUPER+SHIFT+1" = "tag,1,0"
 "SUPER+SHIFT+2" = "tag,2,0"
@@ -74,6 +75,7 @@
 "SUPER+SHIFT+7" = "tag,7,0"
 "SUPER+SHIFT+8" = "tag,8,0"
 "SUPER+SHIFT+9" = "tag,9,0"
+"SUPER+SHIFT+0" = "tag_special_tag"
 
 "SUPER+CTRL+SHIFT+1" = "tagsilent,1,0"
 "SUPER+CTRL+SHIFT+2" = "tagsilent,2,0"
@@ -87,7 +89,18 @@
 
 # overview
 "ALT+tab" = "switcher,all_tag_next"
-"SUPER+tab" = "overcircle"
+# "SUPER+tab" = "overcircle"
+"SUPER+tab" = "focusstack,next"
+
+[bind.default]
+# group
+"SUPER+ALT+h" = "groupjoin,left"
+"SUPER+ALT+j" = "groupjoin,down"
+"SUPER+ALT+k" = "groupjoin,up"
+"SUPER+ALT+l" = "groupjoin,right"
+"SUPER+ALT+bracketleft" = "groupfocus,prev"
+"SUPER+ALT+bracketright" = "groupfocus,next"
+"SUPER+ALT+g" = "groupleave"
 
 # scroller layout
 # bind=SUPER+SHIFT,r,set_proportion,1.0
@@ -104,6 +117,7 @@
 "SUPER+SHIFT+i" = "restore_minimized"
 "SUPER+grave" = "toggle_scratchpad"
 
+
 # spawns
 "SUPER+space" = "spawn,rofi -show drun"
 "SUPER+return" = "spawn,foot"
@@ -117,11 +131,13 @@
 "XF86AudioMute" = "spawn,~/.local/bin/osd/volume.sh sink_mute"
 
 "CTRL+ALT+delete" = "spawn,rofi -show \"power:~/.local/share/rofi/power.sh\" -theme power"
-"SUPER+v" = "spawn,rofi -show \"clipboard:~/.local/share/rofi/clipboard.sh\" -theme clipboard"
-"SUPER+p" = "spawn,rofi -show \"pacman:~/.local/share/rofi/pacman.sh\""
-"SUPER+SHIFT+s" = "spawn,~/.local.bin/snip"
-"SUPER+SHIFT+t" = "spawn,rofi -show \"theme:~/.local/share/rofi/theme.sh\" -theme icons-grid"
+"SUPER+SHIFT+s" = "spawn,~/.local/bin/snip"
+"SUPER+SHIFT+t" = "spawn,rofi -show \"theme:~/.local/share/rofi/theme.sh\" -theme grid"
 "SUPER+f5" = "spawn,chezmoi apply"
+
+"SUPER+p" = "toggle_named_scratchpad,pacmgr,none,foot -a pacmgr ~/.local/bin/pacmgr"
+"SUPER+escape" = "toggle_named_scratchpad,btop,none,foot -a btop btop"
+"SUPER+v" = "toggle_named_scratchpad,clipboard,none,foot -a clipboard ~/.local/bin/clipboard"
 
 # mouse
 [mousebind.default]
@@ -153,6 +169,7 @@
 # key_mode
 [bind.default]
 "SUPER+r" = "setkeymode,resize"
+"SUPER+g" = "setkeymode,group"
 
 [bind.resize]
 "SUPER+r" = "setkeymode,default"
@@ -177,6 +194,10 @@
 "SUPER+j" = "focusdir,down"
 "SUPER+k" = "focusdir,up"
 "SUPER+l" = "focusdir,right"
+
+[bind.group]
+"SUPER+g" = "setkeymode,default"
+"escape" = "setkeymode,default"
 
 [bind.float]
 "SUPER+CTRL+t" = "setkeymode,default"

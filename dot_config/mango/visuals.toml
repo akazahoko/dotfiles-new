@@ -41,6 +41,13 @@ gap_outer_vertical = 10
 scratchpad_width_ratio = 0.8
 scratchpad_height_ratio = 0.9
 
+# group bar
+group_bar_height = 20
+group_bar_close_button_enable = 0
+group_bar_decorate_border_width = 0
+group_bar_decorate_corner_radius = 0
+group_bar_decorate_font_desc = "Iosevka Nerd Font Propo 12"
+
 # tab bar
 tab_bar_height = 30
 tab_bar_decorate_border_width = 0

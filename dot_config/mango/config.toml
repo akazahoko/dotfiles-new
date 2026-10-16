@@ -15,8 +15,7 @@ exec_once = [
   "waybar",
   "fcitx5",
   "awww-daemon",
-  "wl-paste --type text --watch cliphist store",
-  "wl-paste --type image --watch cliphist store",
+  "wl-paste --watch cliphist store",
   "wl-clip-persist --clipboard regular",
   "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
 ]

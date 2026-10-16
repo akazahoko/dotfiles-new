@@ -24,7 +24,34 @@ focused_opacity = 0.9
 app_id = "obsidian"
 focused_opacity = 0.9
 
+[[rule.window_rule]]
+app_id = "pacmgr"
+is_named_scratchpad = true
+width = 1200
+height = 1000
+
+[[rule.window_rule]]
+app_id = "btop"
+is_named_scratchpad = true
+width = 1500
+height = 1000
+
+[[rule.window_rule]]
+app_id = "clipboard"
+is_named_scratchpad = true
+width = 1500
+height = 1000
+
+[[rule.window_rule]]
+app_id = "discord"
+tags = 0
+
 # layer
 [[rule.layer_rule]]
 layer_name = "selection"
 no_blur = 1
+
+[[rule.layer_rule]]
+layer_name = "notification"
+animation_type_open = "none"
+animation_type_close = "fade"
