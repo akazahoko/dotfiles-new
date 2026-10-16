@@ -1,0 +1,21 @@
+#!/usr/bin/env zsh
+
+ANY_KEY_TO_CONTINUE='read -k 1 -q "?Press any key to continue"'
+ABS_PATH=$(realpath "$0")
+
+if [[ "$1" == "--stream" ]]; then
+    cliphist list
+    exit 0
+fi
+
+"$ABS_PATH" --stream | fzf --ansi --border --with-nth=2.. \
+            --bind "enter:execute(cliphist decode {} | wl-copy)+accept" \
+            --bind "delete:execute(cliphist delete)+reload(cliphist list)"  \
+            --bind "shift-delete:execute(cliphist wipe)+reload(cliphist list)"  \
+            --preview-window '65%' \
+            --preview '
+                if [[ $(cliphist decode {} | file -b --mime-type -) == image/* ]]; then
+                    cliphist decode {} | chafa -f sixels -s "${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}"
+                else
+                    cliphist decode {} | bat
+                fi' \

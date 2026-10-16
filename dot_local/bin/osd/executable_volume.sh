@@ -10,7 +10,7 @@ function sink_notify() {
     local PROGRESS=$VOLUME
 
     if [[ "$STATUS" == "[MUTED]" ]]; then
-        VOLUME="已靜音"
+        VOLUME="$VOLUME (已靜音)"
         ICON=$ICON_DIR/nf-fa-volume_mute.png
     elif (("$VOLUME" >= 65)); then
         ICON=$ICON_DIR/nf-fa-volume_high.png

@@ -1,0 +1,43 @@
+#!/usr/bin/env zsh
+
+ANY_KEY_TO_CONTINUE='read -k 1 -q "?Press any key to continue"'
+ABS_PATH=$(realpath "$0")
+
+if [[ "$1" == "--stream" ]]; then
+    case "$2" in
+    --aur)
+    yay -Slaq
+    ;;
+    *)
+    pacman -Slq | awk '
+    BEGIN {
+        while ("pacman -Qqe" | getline pkg) explicit[pkg] = 1; close("pacman -Qq")
+        while ("pacman -Qqd" | getline pkg) dep[pkg] = 1; close("pacman -Qq")
+    }
+    {
+        pkg = $1
+
+        if (!pkg) next
+
+        if (pkg in explicit)
+            printf "\033[1;7m%s\033[0m\n", pkg
+        else if (pkg in dep)
+            printf "\033[3;7m%s\033[0m\n", pkg
+        else
+            printf "%s\n", pkg
+    }';;
+    esac
+    exit 0
+fi
+
+"$ABS_PATH" --stream | fzf --ansi --border -m \
+            --prompt "[OFFICIAL] > "    \
+            --bind "enter:execute(clear; pacman -Q {+} &>/dev/null && sudo pacman -S {+} || yay -S --needed {+}; $ANY_KEY_TO_CONTINUE)" \
+            --bind "delete:execute(clear; sudo pacman -Rns {+}; $ANY_KEY_TO_CONTINUE)+reload($ABS_PATH --stream)"  \
+            --bind "alt-r:reload($ABS_PATH --stream)+change-prompt([OFFICIAL] > )" \
+            --bind "alt-a:reload($ABS_PATH --stream --aur)+change-prompt([AUR] > )" \
+            --bind "alt-s:execute(clear; sudo pacman -Syu; $ANY_KEY_TO_CONTINUE)+reload($ABS_PATH --stream)" \
+            --bind "alt-y:execute(clear; yay -Syua; $ANY_KEY_TO_CONTINUE)+reload($ABS_PATH --stream --aur)" \
+            --preview "pacman -Q {} &>/dev/null && pacman -Qi {} || pacman -Q {} &>/dev/null && pacman -Si {} || yay -Si {}" \
+            --preview-window '65%' \
+            --border-label '[A-s Sync | A-a AUR | A-r Reload | A-y AUR sync]' --border-label-pos '0:bottom' \

@@ -1,9 +1,0 @@
-@import "config.rasi"
-
-element-icon {
-    enabled: false;
-}
-
-window {
-    width: 40%;
-}

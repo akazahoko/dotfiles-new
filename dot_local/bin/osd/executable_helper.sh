@@ -6,17 +6,6 @@ CHAFA='chafa -f sixels -s "${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}"'
 BAT='bat --color=always'
 ICON_DIR="$HOME/.local/bin/osd/icons"
 
-show_dmenu() {
-    fuzzel --dmenu \
-        --width=22 \
-        --nth-delimiter=: \
-        --with-nth=3 \
-        --accept-nth=2 \
-        --hide-prompt \
-        --auto-select \
-        --match-nth=1
-}
-
 print_prompt() {
     for i in {1..${#PROMPTS}}; do
         printf '%d:%b\n' "$i" "${PROMPTS[i]}"
@@ -38,8 +27,6 @@ spawn_terminal() {
 spawn_direct() {
     $SCRIPT $OPTION
 }
-
-# usage: notify_std "id" "icon" "title" "content" ("slider")
 
 notify_std() {
     notify-send -e \
